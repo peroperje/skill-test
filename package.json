@@ -5,7 +5,6 @@
   "dependencies": {
     "@emotion/core": "^10.0.17",
     "@emotion/styled": "^10.0.17",
-    "@rebass/forms": "^4.0.5",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.3",
     "@types/react": "16.9.2",
@@ -30,6 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint './src/**/*.{ts,tsx}'",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

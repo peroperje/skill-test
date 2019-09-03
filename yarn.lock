@@ -1130,13 +1130,6 @@
     "@nodelib/fs.scandir" "2.1.2"
     fastq "^1.6.0"
 
-"@rebass/forms@^4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@rebass/forms/-/forms-4.0.5.tgz#4e0523796ab96db40dfb457988e97062b6f2f6dd"
-  integrity sha512-eX/zCcA3iuBNb6MzPnO/0g4v/23CkfM0JZpgEo1PI5EjqtwNRa4SudUEhZpr8EG4Go6TIwavLr5bBbSBv51DaQ==
-  dependencies:
-    reflexbox "^4.0.5"
-
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
