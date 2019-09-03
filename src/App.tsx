@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Button } from './UI/Button';
+import { Input } from './UI/Input';
 import logo from './logo.svg';
 import './App.css';
 
@@ -23,6 +24,7 @@ const App: React.FC = (): JSX.Element => {
         <Button variant="primary" m={2}>
           Test button
         </Button>
+        <Input />
       </header>
     </div>
   );
