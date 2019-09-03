@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { Button } from './UI/Button';
 import logo from './logo.svg';
 import './App.css';
 
@@ -18,6 +20,9 @@ const App: React.FC = (): JSX.Element => {
         >
           Learn React
         </a>
+        <Button variant="primary" m={2}>
+          Test button
+        </Button>
       </header>
     </div>
   );
