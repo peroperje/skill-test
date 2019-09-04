@@ -2,7 +2,11 @@ import React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 
 import './App.css';
-import { ROOT_ROUTE, LOGIN_ROUTE, FILES_ROUTE } from './route/routesDefinition';
+import {
+  ROOT_ROUTE,
+  LOGIN_ROUTE,
+  FILES_ROUTE
+} from './utils/route/routesDefinition';
 import Home from './view/Home';
 import Files from './view/Files';
 import Login from './view/Login';

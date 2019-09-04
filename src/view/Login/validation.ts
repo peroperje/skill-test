@@ -1,5 +1,5 @@
 import * as yup from 'yup';
-import { email, password } from '../../utils/validationDefinition';
+import { email, password } from '../../utils/validation/validationDefinition';
 
 const loginFormSchema = yup.object().shape({
   email,
