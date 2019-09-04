@@ -12,12 +12,11 @@ server.use(fileUpload());
 server.use(bodyParser.json()); // support json encoded bodies
 server.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-
 server.post('/files', function(req, res, next) {
   let time = new Date().getTime();
   let sampleFile = req.files.file;
   let name = req.files.file.name;
-  let uName =`${time}-${name}`.split(' ').join('-');
+  let uName = `${time}-${name}`.split(' ').join('-');
   sampleFile.mv(path.join(__dirname, 'files', uName), function(err) {
     if (err) {
       return res.status(500).send(err);
@@ -29,9 +28,23 @@ server.post('/files', function(req, res, next) {
   });
 });
 
-server.get('/download/:fileName', function(req, res){
+server.get('/download/:fileName', function(req, res) {
   const file = `${__dirname}/files/${req.params.fileName}`;
   res.download(file);
+});
+
+server.post('/login', function(req, res) {
+  const db = router.db;
+  const { email } = req.body;
+
+  const user = db
+    .get('users')
+    .find({ email })
+    .value();
+  res.status(200).jsonp({
+    accessToken: 'b08f86af-35da-48f2-8fab-cef3904660bd',
+    user
+  });
 });
 
 server.use(router);

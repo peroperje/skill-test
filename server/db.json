@@ -1,3 +1,11 @@
 {
-  "files": []
+  "files": [],
+  "users": [
+    {
+      "id": 1,
+      "fistName": "Petar",
+      "LastName": "Borovcanin",
+      "email": "petar@ptt.yu"
+    }
+  ]
 }
