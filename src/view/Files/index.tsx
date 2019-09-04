@@ -1,7 +1,15 @@
 import React from 'react';
 
-function Files(): JSX.Element {
-  return <>Files page</>;
-}
+import UploadFile from './UploadFile';
+import FilesList from './FilesList';
+
+const Files: React.FC = (): JSX.Element => {
+  return (
+    <div className="Flex-column">
+      <UploadFile />
+      <FilesList />
+    </div>
+  );
+};
 
 export default Files;
