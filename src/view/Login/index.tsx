@@ -1,7 +1,5 @@
 import React from 'react';
 
-function Login(): JSX.Element {
-  return <>Login page</>;
-}
+const Login: React.FC = (): JSX.Element => <>Login page</>;
 
 export default Login;
