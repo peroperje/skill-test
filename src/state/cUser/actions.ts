@@ -1,11 +1,11 @@
 import { action, Action } from 'typesafe-actions';
 import {
-  CUser,
   CUserActionsTypes,
   PayloadRequest,
   CUserRequestAction,
   CUserSuccessAction,
-  CUserFailedAction
+  CUserFailedAction,
+  CUser
 } from './types';
 
 export const loginRequest = (data: PayloadRequest): CUserRequestAction => {

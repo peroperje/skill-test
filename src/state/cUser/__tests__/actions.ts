@@ -1,5 +1,5 @@
 import { loginRequest, loginSuccess, loginFailed, logout } from '../actions';
-import { CUserActionsTypes } from '../types';
+import { CUserActionsTypes, CUser } from '../types';
 
 describe('cUser Actions', () => {
   describe('loginRequest', () => {
@@ -23,16 +23,16 @@ describe('cUser Actions', () => {
     });
 
     it('should create proper action object', () => {
-      const cUserData = {
+      const userData: CUser = {
         id: 1,
         email: 'petar@ptt.yu',
         firstName: 'someFirstName',
         lastName: 'someLastName'
       };
-      const action = loginSuccess(cUserData);
+      const action = loginSuccess(userData);
       expect(action).toEqual({
         type: CUserActionsTypes.LOGIN_SUCCESS,
-        payload: { ...cUserData }
+        payload: { ...userData }
       });
     });
   });

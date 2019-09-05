@@ -27,3 +27,8 @@ export interface PayloadRequest {
 export type CUserRequestAction = PayloadAction<TypeConstant, PayloadRequest>;
 export type CUserSuccessAction = PayloadAction<TypeConstant, CUser>;
 export type CUserFailedAction = PayloadAction<TypeConstant, string>;
+
+export interface CUserServiceSuccessResponse {
+  accessToken: string;
+  user: CUser;
+}

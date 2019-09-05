@@ -41,10 +41,14 @@ server.post('/login', function(req, res) {
     .get('users')
     .find({ email })
     .value();
-  res.status(200).jsonp({
-    accessToken: 'b08f86af-35da-48f2-8fab-cef3904660bd',
-    user
-  });
+  if (user) {
+    res.status(200).jsonp({
+      accessToken: 'b08f86af-35da-48f2-8fab-cef3904660bd',
+      user
+    });
+  } else {
+    res.status(401).jsonp('User not found');
+  }
 });
 
 server.use(router);
