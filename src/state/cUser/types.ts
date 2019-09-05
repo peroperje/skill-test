@@ -18,8 +18,11 @@ export interface CUserState {
   error: string;
 }
 
-interface Payload {
-  data?: CUser;
+export interface PayloadRequest {
+  email: string;
+  password: string;
 }
 
-export type CUserActions = PayloadAction<TypeConstant, Payload>;
+export type CUserRequestAction = PayloadAction<TypeConstant, PayloadRequest>;
+export type CUserSuccessAction = PayloadAction<TypeConstant, CUser>;
+export type CUserFailedAction = PayloadAction<TypeConstant, string>;
