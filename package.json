@@ -8,13 +8,19 @@
     "@types/node": "12.7.3",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
+    "@types/react-redux": "^7.1.2",
     "@types/react-router-dom": "^4.3.5",
     "@types/yup": "^0.26.23",
     "formik": "^1.5.8",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.0.5",
+    "reselect": "^4.0.0",
+    "typesafe-actions": "^4.4.2",
     "typescript": "3.6.2",
     "yup": "^0.27.0"
   },
@@ -57,7 +63,8 @@
     "husky": "2.7.0",
     "json-server": "^0.15.1",
     "lint-staged": "^9.2.5",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "redux-devtools-extension": "^2.13.8"
   },
   "husky": {
     "hooks": {
