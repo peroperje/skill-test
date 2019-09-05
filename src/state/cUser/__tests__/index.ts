@@ -1,5 +1,5 @@
 import reducer, { INIT_STATE } from '../index';
-import { loginRequest, loginSuccess, loginFailed } from '../actions';
+import { loginRequest, loginSuccess, loginFailed, logout } from '../actions';
 import { CUser, CUserState } from '../types';
 
 const createState = (obj: {
@@ -7,6 +7,13 @@ const createState = (obj: {
   fetching?: boolean;
   error?: string;
 }): CUserState => ({ ...INIT_STATE, ...obj });
+
+const cUserSampleData: CUser = {
+  id: 1,
+  firstName: 'someFirstName',
+  lastName: 'someLastName',
+  email: 'some@ptt.yu'
+};
 
 describe('cUser Reducer', () => {
   it('should be defined', () => {
@@ -24,17 +31,12 @@ describe('cUser Reducer', () => {
 
   it('should have proper state after emitted success action', () => {
     const oldState = createState({ fetching: true });
-    const payload = {
-      id: 1,
-      firstName: 'someFirstName',
-      lastName: 'someLastName',
-      email: 'some@ptt.yu'
-    };
-    const action = loginSuccess(payload);
+
+    const action = loginSuccess(cUserSampleData);
     const state = reducer(oldState, action);
     const expectedState = createState({
       fetching: false,
-      data: payload
+      data: cUserSampleData
     });
     expect(state).toEqual(expectedState);
   });
@@ -46,5 +48,12 @@ describe('cUser Reducer', () => {
     const state = reducer(oldState, action);
     const expectedState = createState({ error: payload });
     expect(state).toEqual(expectedState);
+  });
+
+  it('should have proper state after emitted action logout', () => {
+    const oldState = createState({ data: cUserSampleData });
+    const action = logout();
+    const state = reducer(oldState, action);
+    expect(state).toEqual(INIT_STATE);
   });
 });

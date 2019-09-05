@@ -1,4 +1,4 @@
-import { action } from 'typesafe-actions';
+import { action, Action } from 'typesafe-actions';
 import {
   CUser,
   CUserActionsTypes,
@@ -18,4 +18,8 @@ export const loginSuccess = (data: CUser): CUserSuccessAction => {
 
 export const loginFailed = (error: string): CUserFailedAction => {
   return action(CUserActionsTypes.LOGIN_FAILED, error);
+};
+
+export const logout = (): Action => {
+  return action(CUserActionsTypes.LOGOUT);
 };

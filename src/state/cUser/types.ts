@@ -2,7 +2,8 @@ import { PayloadAction, TypeConstant } from 'typesafe-actions';
 export enum CUserActionsTypes {
   LOGIN_REQUEST = '@cUser/LOGIN_REQUEST',
   LOGIN_SUCCESS = '@cUser/LOGIN_SUCCESS',
-  LOGIN_FAILED = '@cUser/LOGIN_FAILED'
+  LOGIN_FAILED = '@cUser/LOGIN_FAILED',
+  LOGOUT = '@cUser/LOGOUT'
 }
 
 export interface CUser {

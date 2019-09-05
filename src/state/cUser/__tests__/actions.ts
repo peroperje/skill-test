@@ -1,4 +1,4 @@
-import { loginRequest, loginSuccess, loginFailed } from '../actions';
+import { loginRequest, loginSuccess, loginFailed, logout } from '../actions';
 import { CUserActionsTypes } from '../types';
 
 describe('cUser Actions', () => {
@@ -49,6 +49,13 @@ describe('cUser Actions', () => {
         type: CUserActionsTypes.LOGIN_FAILED,
         payload: error
       });
+    });
+  });
+
+  describe('logout', () => {
+    const action = logout();
+    expect(action).toEqual({
+      type: CUserActionsTypes.LOGOUT
     });
   });
 });

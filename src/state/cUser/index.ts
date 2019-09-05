@@ -37,6 +37,8 @@ const reducer: Reducer<CUserState> = (
           error: payload
         }
       };
+    case CUserActionsTypes.LOGOUT:
+      return { ...INIT_STATE };
     default:
       return state;
   }
