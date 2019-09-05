@@ -19,9 +19,3 @@ export const loginSuccess = (data: CUser): CUserSuccessAction => {
 export const loginFailed = (error: string): CUserFailedAction => {
   return action(CUserActionsTypes.LOGIN_FAILED, error);
 };
-
-export default {
-  loginRequest,
-  loginSuccess,
-  loginFailed
-};

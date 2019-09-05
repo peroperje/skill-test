@@ -13,7 +13,7 @@ export interface CUser {
 }
 
 export interface CUserState {
-  data: CUser;
+  data: CUser | {};
   fetching: boolean;
   error: string;
 }
