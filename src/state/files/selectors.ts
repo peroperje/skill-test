@@ -54,3 +54,10 @@ export const getUploadErr: Selector<ApplicationState, string> = createSelector(
     return state.uploadingError;
   }
 );
+
+export const shouldFetch: Selector<ApplicationState, boolean> = createSelector(
+  getState,
+  state => {
+    return !state.fetching && state.fetchedAt === 0;
+  }
+);

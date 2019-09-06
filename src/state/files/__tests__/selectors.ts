@@ -8,7 +8,8 @@ import {
   isDeleting,
   getDeleteErr,
   isUploading,
-  getUploadErr
+  getUploadErr,
+  shouldFetch
 } from '../selectors';
 import { ApplicationState } from '../../index';
 
@@ -132,6 +133,25 @@ describe('Files Selectors', () => {
       const state = createState({ uploadingError: error });
       const err = selector.resultFunc(state);
       expect(err).toBe(error);
+    });
+  });
+
+  describe('shouldFetch', () => {
+    const selector = shouldFetch as OutSelector<boolean>;
+    it('should return true', () => {
+      const state = createState({});
+      const shouldFetch = selector.resultFunc(state);
+      expect(shouldFetch).toBe(true);
+    });
+    it('should return false', () => {
+      const state = createState({ fetching: true });
+      const shouldFetch = selector.resultFunc(state);
+      expect(shouldFetch).toBe(false);
+    });
+    it('should return false', () => {
+      const state = createState({ fetchedAt: 4654665 });
+      const shouldFetch = selector.resultFunc(state);
+      expect(shouldFetch).toBe(false);
     });
   });
 });
