@@ -1,3 +1,5 @@
+import index from '../../utils/localStorage';
+
 export enum FilesActionTypes {
   FETCH_FILES_REQUEST = '@files/FETCH_FILES_REQUEST',
   FETCH_FILES_SUCCESS = '@files/FETCH_FILES_SUCCESS',
@@ -17,4 +19,19 @@ export interface FileItem {
   name: string;
   updateAt: number;
   download: string;
+}
+
+export interface FileStatePropById {
+  [index: number]: FileItem;
+}
+
+export interface FileState {
+  fetching: boolean;
+  fetchError: string;
+  updating: boolean;
+  updateError: string;
+  deleting: boolean;
+  deleteError: string;
+  byId: FileStatePropById;
+  allId: number[];
 }
