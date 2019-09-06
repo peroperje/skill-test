@@ -8,7 +8,7 @@ export const fetchFiles = (): Promise<FileItem[]> => {
     url,
     method: 'get'
   })
-    .then(r => r.data)
+    .then(response => response.data)
     .catch(e => {
       throw new Error(e.response.data);
     });
@@ -21,7 +21,7 @@ export const uploadFile = (data: { file: File }): Promise<FileItem> => {
     data,
     headers: { 'Content-Type': 'multipart/form-data' }
   })
-    .then(r => r.data)
+    .then(response => response.data)
     .catch(e => {
       throw new Error(e.response.data);
     });
@@ -32,6 +32,8 @@ export const deleteFile = (id: number): Promise<{}> => {
     url: `${url}/${id}`,
     method: 'delete'
   })
-    .then()
-    .catch();
+    .then(response => response.data)
+    .catch(e => {
+      throw new Error(e.response.data);
+    });
 };

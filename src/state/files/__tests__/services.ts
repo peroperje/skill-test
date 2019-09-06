@@ -1,3 +1,4 @@
+jest.mock('../../../utils/service/request');
 import { fetchFiles, deleteFile, uploadFile, url } from '../services';
 
 describe('Files Service', () => {
@@ -30,6 +31,7 @@ describe('Files Service', () => {
         url: `${url}/${id}`,
         method: 'delete'
       });
+      done();
     });
   });
 });
