@@ -32,11 +32,14 @@ describe('File Sagas', () => {
   describe('fetch', () => {
     it('success', () => {
       const data = [] as FileItem[];
+      const fetchedAt = new Date().getTime();
       testSaga(fetch)
         .next()
         .call(fetchService)
         .next(data)
-        .put(fetchFilesSuccess(data))
+        .call(new Date().getTime)
+        .next(fetchedAt)
+        .put(fetchFilesSuccess(data, fetchedAt))
         .next()
         .isDone();
     });

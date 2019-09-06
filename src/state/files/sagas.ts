@@ -20,7 +20,8 @@ import {
 export function* fetch(): SagaIterator {
   try {
     const res: unknown = yield call(fetchFilesService);
-    yield put(fetchFilesSuccess(res as FileItem[]));
+    const fetchedAt: unknown = yield call(new Date().getTime);
+    yield put(fetchFilesSuccess(res as FileItem[], fetchedAt as number));
   } catch (e) {
     yield put(fetchFilesFailed(e.message));
   }

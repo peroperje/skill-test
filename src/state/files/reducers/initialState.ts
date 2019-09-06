@@ -5,6 +5,7 @@ export const INIT_STATE: FileState = {
   byId: {},
   fetching: false,
   fetchError: '',
+  fetchedAt: 0,
   uploading: false,
   uploadingError: '',
   deleting: false,

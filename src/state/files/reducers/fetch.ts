@@ -34,8 +34,12 @@ const fetch: Reducer<FileState> = (state = INIT_STATE, action) => {
         ...state,
         ...{
           fetching: false,
-          byId: normalizeState(payload),
-          allId: [...state.allId, ...payload.map((i: FileItem): number => i.id)]
+          fetchedAt: payload.fetchedAt,
+          byId: normalizeState(payload.data),
+          allId: [
+            ...state.allId,
+            ...payload.data.map((i: FileItem): number => i.id)
+          ]
         }
       };
     case FilesActionTypes.FETCH_FILES_FAILED:

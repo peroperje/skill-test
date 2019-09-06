@@ -28,9 +28,13 @@ describe('Files Action', () => {
 
     it('fetchFilesSuccess', () => {
       const data: FileItem[] = [{ ...FileItemSample }];
-      expect(fetchFilesSuccess(data)).toEqual({
+      const fetchedAt = new Date().getTime();
+      expect(fetchFilesSuccess(data, fetchedAt)).toEqual({
         type: FilesActionTypes.FETCH_FILES_SUCCESS,
-        payload: data
+        payload: {
+          data,
+          fetchedAt
+        }
       });
     });
 

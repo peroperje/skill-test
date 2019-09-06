@@ -39,12 +39,14 @@ describe('Fetch Reducer', () => {
         updateAt: 4645646
       }
     ];
-    const action = fetchFilesSuccess(data);
+    const fetchedAt = new Date().getTime();
+    const action = fetchFilesSuccess(data, fetchedAt);
     const state = fetchReducer(oldState, action);
     const expectedState = {
       ...oldState,
       ...{
         fetching: false,
+        fetchedAt,
         byId: normalizeState(data),
         allId: [...oldState.allId, ...data.map((i: FileItem): number => i.id)]
       }

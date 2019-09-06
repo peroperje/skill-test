@@ -5,7 +5,14 @@ import {
   deleteFileFailed
 } from '../../actions';
 import { INIT_STATE } from '../initialState';
-import { createState } from './fetch';
+import { FileState } from '../../types';
+
+export const createState = (obj: Partial<FileState>): FileState => {
+  return {
+    ...INIT_STATE,
+    ...obj
+  };
+};
 
 describe('Delete Reducer', () => {
   it('should have proper state after emitted delete request', () => {

@@ -6,9 +6,10 @@ export const fetchFilesRequest = (): Action => {
 };
 
 export const fetchFilesSuccess = (
-  data: FileItem[]
-): PayloadAction<TypeConstant, FileItem[]> => {
-  return action(FilesActionTypes.FETCH_FILES_SUCCESS, data);
+  data: FileItem[],
+  fetchedAt: number
+): PayloadAction<TypeConstant, { data: FileItem[]; fetchedAt: number }> => {
+  return action(FilesActionTypes.FETCH_FILES_SUCCESS, { data, fetchedAt });
 };
 
 export const fetchFilesFailed = (

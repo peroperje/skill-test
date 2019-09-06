@@ -26,6 +26,7 @@ export interface FileStatePropById {
 export interface FileState {
   fetching: boolean;
   fetchError: string;
+  fetchedAt: number;
   uploading: boolean;
   uploadingError: string;
   deleting: boolean;
