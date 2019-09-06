@@ -1,10 +1,17 @@
 import { SagaIterator } from 'redux-saga';
-import { takeLatest, takeEvery } from 'redux-saga/effects';
+import { takeLatest, takeEvery, call, put } from 'redux-saga/effects';
 
-import { FilesActionTypes } from './types';
+import { FilesActionTypes, FileItem } from './types';
+import { fetchFiles as fetchFilesService } from './services';
+import { fetchFilesSuccess, fetchFilesFailed } from './actions';
 
-export function* fetch() {
-  yield {};
+export function* fetch(): SagaIterator {
+  try {
+    const res: unknown = yield call(fetchFilesService);
+    yield put(fetchFilesSuccess(res as FileItem[]));
+  } catch (e) {
+    yield put(fetchFilesFailed(e.message));
+  }
 }
 export function* upload() {
   yield {};
