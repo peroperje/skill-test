@@ -47,6 +47,7 @@ describe('Files Selectors', () => {
       expect(data).toEqual([filesSample]);
     });
   });
+
   describe('isFetching', () => {
     const selector = isFetching as OutSelector<boolean>;
     it('should return false', () => {
@@ -58,6 +59,35 @@ describe('Files Selectors', () => {
       const state = createState({ fetching: true });
       const fetching = selector.resultFunc(state);
       expect(fetching).toBe(true);
+    });
+  });
+
+  describe('getFetchErr', () => {
+    const selector = getFetchErr as OutSelector<string>;
+    it('should return empty string', () => {
+      const state = createState({});
+      const err = selector.resultFunc(state);
+      expect(err).toBe('');
+    });
+    it('should return string', () => {
+      const error = 'some error';
+      const state = createState({ fetchError: error });
+      const err = selector.resultFunc(state);
+      expect(err).toBe(error);
+    });
+  });
+
+  describe('isDeleting', () => {
+    const selector = isDeleting as OutSelector<boolean>;
+    it('should return false', () => {
+      const state = createState({});
+      const str = selector.resultFunc(state);
+      expect(str).toBe(false);
+    });
+    it('should return true', () => {
+      const state = createState({ deleting: true });
+      const str = selector.resultFunc(state);
+      expect(str).toBe(true);
     });
   });
 });
