@@ -242,6 +242,6 @@ const reducer: Reducer<FileState> = (state = INIT_STATE, action) => {
   }
 };
 
-const sReducer = reduceReducers(INIT_STATE, fetch, upload, deleteFile);
+const sReducer = reduceReducers(fetch, upload, deleteFile);
 export default sReducer as Reducer<FileState>;
 //export default reducer;
