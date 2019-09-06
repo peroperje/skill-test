@@ -9,6 +9,7 @@ import {
   LOGIN_ROUTE,
   FILES_ROUTE
 } from './utils/route/routesDefinition';
+import RouteOnlyNonLogged from './utils/route/RouteOnlyNonLogged';
 import Home from './view/Home';
 import Files from './view/Files';
 import Login from './view/Login';
@@ -26,7 +27,7 @@ const App: React.FC = (): JSX.Element => {
             </div>
             <div>
               <Route path={ROOT_ROUTE} exact component={Home} />
-              <Route path={LOGIN_ROUTE} exact component={Login} />
+              <RouteOnlyNonLogged path={LOGIN_ROUTE} exact component={Login} />
               <Route path={FILES_ROUTE} exact component={Files} />
             </div>
           </header>

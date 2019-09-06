@@ -2,9 +2,9 @@ import React from 'react';
 
 import Delete from './Delete';
 
-import { IDProps } from './types';
+import { PropsId } from './types';
 
-const ActionsBtns: React.FC<IDProps> = ({ id }: IDProps) => (
+const ActionsBtns: React.FC<PropsId> = ({ id }: PropsId) => (
   <div>
     <button>View</button>
     <button>Download</button>

@@ -1,4 +1,4 @@
-export interface IDProps {
+export interface PropsId {
   id: number;
 }
 
