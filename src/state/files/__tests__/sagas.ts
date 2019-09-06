@@ -11,6 +11,7 @@ import {
   fetchFilesFailed,
   deleteFileSuccess,
   deleteFileFailed,
+  uploadFileRequest,
   uploadFileSuccess,
   uploadFilesFailed
 } from '../actions';
@@ -45,6 +46,20 @@ describe('File Sagas', () => {
         .call(fetchService)
         .throw(err)
         .put(fetchFilesFailed(err.message))
+        .next()
+        .isDone();
+    });
+  });
+  describe('upload', () => {
+    it('success', () => {
+      const payload = { file: {} } as { file: File };
+      const data = {} as FileItem;
+      const action = uploadFileRequest(payload);
+      testSaga(upload, action)
+        .next()
+        .call(uploadService, action.payload)
+        .next(data)
+        .put(uploadFileSuccess(data))
         .next()
         .isDone();
     });
