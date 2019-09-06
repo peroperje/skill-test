@@ -5,6 +5,12 @@
       "name": "Untitled Document 1.txt",
       "download": "/download/1567730364399-Untitled-Document-1.txt",
       "id": 2
+    },
+    {
+      "updateAt": 1567773513251,
+      "name": "test-file-3.csv",
+      "download": "/download/1567773513251-test-file-3.csv",
+      "id": 3
     }
   ],
   "users": [
