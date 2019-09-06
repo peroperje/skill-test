@@ -2,7 +2,7 @@ import { Reducer } from 'redux';
 import { FilesActionTypes, FileState, FileStatePropById } from '../types';
 import { INIT_STATE } from './initialState';
 
-const removePropFromObj = (
+export const removePropFromObj = (
   byId: FileStatePropById,
   id: number
 ): FileStatePropById => {

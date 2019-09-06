@@ -7,7 +7,7 @@ import {
 import fetchReducer, { normalizeState } from '../fetch';
 import { INIT_STATE } from '../initialState';
 
-const createState = (obj: Partial<FileState>): FileState => {
+export const createState = (obj: Partial<FileState>): FileState => {
   return {
     ...INIT_STATE,
     ...obj
