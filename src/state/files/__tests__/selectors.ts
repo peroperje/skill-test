@@ -4,11 +4,11 @@ import { FileState, FileItem, FileStatePropById } from '../types';
 import {
   getFiles,
   isFetching,
-  getFetchingErr,
+  getFetchErr,
   isDeleting,
-  getDelletingErr,
+  getDeleteErr,
   isUploading,
-  getUpoadingErr
+  getUploadErr
 } from '../selectors';
 import { ApplicationState } from '../../index';
 
@@ -45,6 +45,19 @@ describe('Files Selectors', () => {
       });
       const data = selector.resultFunc(state);
       expect(data).toEqual([filesSample]);
+    });
+  });
+  describe('isFetching', () => {
+    const selector = isFetching as OutSelector<boolean>;
+    it('should return false', () => {
+      const state = createState({});
+      const fetching = selector.resultFunc(state);
+      expect(fetching).toBe(false);
+    });
+    it('should return true', () => {
+      const state = createState({ fetching: true });
+      const fetching = selector.resultFunc(state);
+      expect(fetching).toBe(true);
     });
   });
 });

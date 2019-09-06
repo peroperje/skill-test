@@ -20,10 +20,7 @@ export const isFetching: Selector<ApplicationState, boolean> = createSelector(
   }
 );
 
-export const getFetchingErr: Selector<
-  ApplicationState,
-  string
-> = createSelector(
+export const getFetchErr: Selector<ApplicationState, string> = createSelector(
   getState,
   state => {
     return state.fetchError;
@@ -37,10 +34,7 @@ export const isDeleting: Selector<ApplicationState, boolean> = createSelector(
   }
 );
 
-export const getDelletingErr: Selector<
-  ApplicationState,
-  string
-> = createSelector(
+export const getDeleteErr: Selector<ApplicationState, string> = createSelector(
   getState,
   state => {
     return state.deleteError;
@@ -54,10 +48,7 @@ export const isUploading: Selector<ApplicationState, boolean> = createSelector(
   }
 );
 
-export const getUpoadingErr: Selector<
-  ApplicationState,
-  string
-> = createSelector(
+export const getUploadErr: Selector<ApplicationState, string> = createSelector(
   getState,
   state => {
     return state.deleteError;
