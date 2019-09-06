@@ -90,4 +90,48 @@ describe('Files Selectors', () => {
       expect(str).toBe(true);
     });
   });
+
+  describe('getDeleteErr', () => {
+    const selector = getDeleteErr as OutSelector<string>;
+    it('should return empty string', () => {
+      const state = createState({});
+      const err = selector.resultFunc(state);
+      expect(err).toBe('');
+    });
+    it('should return string', () => {
+      const error = 'some error';
+      const state = createState({ deleteError: error });
+      const err = selector.resultFunc(state);
+      expect(err).toBe(error);
+    });
+  });
+
+  describe('isUploading', () => {
+    const selector = isUploading as OutSelector<boolean>;
+    it('should return false', () => {
+      const state = createState({});
+      const str = selector.resultFunc(state);
+      expect(str).toBe(false);
+    });
+    it('should return true', () => {
+      const state = createState({ uploading: true });
+      const str = selector.resultFunc(state);
+      expect(str).toBe(true);
+    });
+  });
+
+  describe('getUploadErr', () => {
+    const selector = getUploadErr as OutSelector<string>;
+    it('should return empty string', () => {
+      const state = createState({});
+      const err = selector.resultFunc(state);
+      expect(err).toBe('');
+    });
+    it('should return string', () => {
+      const error = 'some error';
+      const state = createState({ uploadingError: error });
+      const err = selector.resultFunc(state);
+      expect(err).toBe(error);
+    });
+  });
 });

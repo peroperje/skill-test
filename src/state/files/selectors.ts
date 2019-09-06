@@ -51,6 +51,6 @@ export const isUploading: Selector<ApplicationState, boolean> = createSelector(
 export const getUploadErr: Selector<ApplicationState, string> = createSelector(
   getState,
   state => {
-    return state.deleteError;
+    return state.uploadingError;
   }
 );
