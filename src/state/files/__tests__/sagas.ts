@@ -4,11 +4,12 @@ import { FileItem, FilesActionTypes } from '../types';
 import {
   fetchFiles as fetchService,
   uploadFile as uploadService,
-  deleteFile as deleService
+  deleteFile as deleteService
 } from '../services';
 import {
   fetchFilesSuccess,
   fetchFilesFailed,
+  deleteFileRequest,
   deleteFileSuccess,
   deleteFileFailed,
   uploadFileRequest,
@@ -70,6 +71,19 @@ describe('File Sagas', () => {
         .call(uploadService, action.payload)
         .throw(err)
         .put(uploadFilesFailed(err.message))
+        .next()
+        .isDone();
+    });
+  });
+  describe('delete', () => {
+    const id = 1;
+    const action = deleteFileRequest(id);
+    it('success', () => {
+      testSaga(deleteFile, action)
+        .next()
+        .call(deleteService, action.payload)
+        .next()
+        .put(deleteFileSuccess(id))
         .next()
         .isDone();
     });
