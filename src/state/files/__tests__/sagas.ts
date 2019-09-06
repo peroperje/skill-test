@@ -1,5 +1,5 @@
 import { testSaga } from 'redux-saga-test-plan';
-import watchFile, { fetch, deleteFile, upload } from '../sagas';
+import watchFile, { fetch, deleteFile, upload, getNow } from '../sagas';
 import { FileItem, FilesActionTypes } from '../types';
 import {
   fetchFiles as fetchService,
@@ -37,7 +37,7 @@ describe('File Sagas', () => {
         .next()
         .call(fetchService)
         .next(data)
-        .call(new Date().getTime)
+        .call(getNow)
         .next(fetchedAt)
         .put(fetchFilesSuccess(data, fetchedAt))
         .next()

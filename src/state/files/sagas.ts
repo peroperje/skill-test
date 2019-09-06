@@ -17,11 +17,13 @@ import {
   deleteFileFailed
 } from './actions';
 
+export const getNow = (): number => new Date().getTime();
+
 export function* fetch(): SagaIterator {
   try {
-    const res: unknown = yield call(fetchFilesService);
-    const fetchedAt: unknown = yield call(new Date().getTime);
-    yield put(fetchFilesSuccess(res as FileItem[], fetchedAt as number));
+    const data: unknown = yield call(fetchFilesService);
+    const fetchedAt: unknown = yield call(getNow);
+    yield put(fetchFilesSuccess(data as FileItem[], fetchedAt as number));
   } catch (e) {
     yield put(fetchFilesFailed(e.message));
   }
