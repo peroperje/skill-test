@@ -87,5 +87,15 @@ describe('File Sagas', () => {
         .next()
         .isDone();
     });
+    it('failed', () => {
+      const err = new Error('message');
+      testSaga(deleteFile, action)
+        .next()
+        .call(deleteService, id)
+        .throw(err)
+        .put(deleteFileFailed(err.message))
+        .next()
+        .isDone();
+    });
   });
 });
