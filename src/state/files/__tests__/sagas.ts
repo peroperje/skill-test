@@ -51,15 +51,25 @@ describe('File Sagas', () => {
     });
   });
   describe('upload', () => {
+    const payload = { file: {} } as { file: File };
+    const data = {} as FileItem;
+    const action = uploadFileRequest(payload);
     it('success', () => {
-      const payload = { file: {} } as { file: File };
-      const data = {} as FileItem;
-      const action = uploadFileRequest(payload);
       testSaga(upload, action)
         .next()
         .call(uploadService, action.payload)
         .next(data)
         .put(uploadFileSuccess(data))
+        .next()
+        .isDone();
+    });
+    it('failed', () => {
+      const err = new Error('error message');
+      testSaga(upload, action)
+        .next()
+        .call(uploadService, action.payload)
+        .throw(err)
+        .put(uploadFilesFailed(err.message))
         .next()
         .isDone();
     });
