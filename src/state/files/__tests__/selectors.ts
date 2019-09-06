@@ -11,7 +11,7 @@ import {
   getUploadErr,
   shouldFetch
 } from '../selectors';
-import { ApplicationState } from '../../index';
+import { ApplicationState } from '../../types';
 
 type OutSelector<T> = OutputSelector<ApplicationState, T, (x: FileState) => T>;
 

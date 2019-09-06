@@ -1,6 +1,6 @@
 import { createSelector, Selector } from 'reselect';
-import { ApplicationState } from '../index';
 import { CUserState, CUser } from './types';
+import { ApplicationState } from '../types';
 
 const getState = (state: ApplicationState): CUserState => state.cUser;
 

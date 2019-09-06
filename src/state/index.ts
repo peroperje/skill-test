@@ -1,18 +1,12 @@
-import { createStore, Store, applyMiddleware } from 'redux';
+import { applyMiddleware, createStore, Store } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
 
 import rootReducer from './rootReducer';
 import rootSaga from './rootSaga';
-import { CUserState } from './cUser/types';
-import { FileState } from './files/types';
+import { ApplicationState } from './types';
 
 const sagaMiddleware = createSagaMiddleware();
-
-export interface ApplicationState {
-  cUser: CUserState;
-  files: FileState;
-}
 
 const composeEnhancers = composeWithDevTools({
   // options like actionSanitizer, stateSanitizer

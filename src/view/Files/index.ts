@@ -2,11 +2,11 @@ import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
 import { compose } from 'recompose';
 
 import withShouldFetch from '../../HoC/withShouldFetch';
-import { ApplicationState } from '../../state';
 import { fetchFilesRequest } from '../../state/files/actions';
 import { shouldFetch } from '../../state/files/selectors';
 
 import Files from './Files';
+import { ApplicationState } from '../../state/types';
 
 interface DispatchProps {
   fetchFn: () => void;

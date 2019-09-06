@@ -10,8 +10,10 @@ const withShouldFetch = (comparePropName: string, fetchFnPropsName: string) => {
       } = props;
 
       useEffect(() => {
-        fetchFn();
-      });
+        if (compare) {
+          fetchFn();
+        }
+      }, [compare, fetchFn]);
       return <Component {...rest} />;
     };
 

@@ -1,7 +1,7 @@
 import { OutputSelector } from 'reselect';
-import { ApplicationState } from '../../index';
 import { CUserState, CUser } from '../types';
 import { getCUser, isFetching, getError, isLogged } from '../selectors';
+import { ApplicationState } from '../../types';
 
 type OutSelector<T> = OutputSelector<ApplicationState, T, (x: CUserState) => T>;
 const initState: CUserState = {

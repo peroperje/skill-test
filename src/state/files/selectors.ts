@@ -1,7 +1,7 @@
 import { createSelector, Selector } from 'reselect';
 
-import { ApplicationState } from '../index';
 import { FileItem, FileState } from './types';
+import { ApplicationState } from '../types';
 
 const getState = (state: ApplicationState): FileState => state.files;
 
