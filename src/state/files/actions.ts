@@ -18,9 +18,9 @@ export const fetchFilesFailed = (
   return action(FilesActionTypes.FETCH_FILES_FAILED, error);
 };
 
-export const uploadFileRequest = (data: {
-  file: File;
-}): PayloadAction<TypeConstant, { file: File }> => {
+export const uploadFileRequest = (
+  data: FormData
+): PayloadAction<TypeConstant, FormData> => {
   return action(FilesActionTypes.UPLOAD_FILE_REQUEST, data);
 };
 

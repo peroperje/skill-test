@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, FormikProps } from 'formik';
 
 import validationSchema from './validation';
-
+import { SubmitDispatch } from './types';
 export interface FormValues {
   files: FileList | null;
 }
@@ -11,11 +11,13 @@ const initialValues: FormValues = {
   files: null
 };
 
-const UploadFile: React.FC = (): JSX.Element => {
+const UploadFile: React.FC<SubmitDispatch> = ({
+  submit
+}: SubmitDispatch): JSX.Element => {
   return (
     <Formik
-      onSubmit={(values: {}): void => {
-        console.log(values);
+      onSubmit={(values: FormValues): void => {
+        submit(values.files as FileList);
       }}
       initialValues={initialValues}
       validationSchema={validationSchema}

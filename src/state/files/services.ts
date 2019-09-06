@@ -14,7 +14,7 @@ export const fetchFiles = (): Promise<FileItem[]> => {
     });
 };
 
-export const uploadFile = (data: { file: File }): Promise<FileItem> => {
+export const uploadFile = (data: FormData): Promise<FileItem> => {
   return request({
     url,
     method: 'post',

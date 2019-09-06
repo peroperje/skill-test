@@ -55,7 +55,7 @@ describe('File Sagas', () => {
     });
   });
   describe('upload', () => {
-    const payload = { file: {} } as { file: File };
+    const payload = new FormData();
     const data = {} as FileItem;
     const action = uploadFileRequest(payload);
     it('success', () => {

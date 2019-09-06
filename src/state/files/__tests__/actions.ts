@@ -48,18 +48,11 @@ describe('Files Action', () => {
   });
   describe('Upload', () => {
     it('uploadFileRequest', () => {
-      const file = {
-        name: 'someName',
-        size: 4455,
-        type: 'text/csv',
-        lastModified: 45654646
-      } as File;
+      const file = new FormData();
 
-      expect(uploadFileRequest({ file })).toEqual({
+      expect(uploadFileRequest(file)).toEqual({
         type: FilesActionTypes.UPLOAD_FILE_REQUEST,
-        payload: {
-          file
-        }
+        payload: file
       });
     });
 

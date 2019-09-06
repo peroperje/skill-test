@@ -1,5 +1,18 @@
 {
-  "files": [],
+  "files": [
+    {
+      "updateAt": 1567805656021,
+      "name": "file-test-1.xlsx",
+      "download": "/download/1567805656021-file-test-1.xlsx",
+      "id": 1
+    },
+    {
+      "updateAt": 1567806329055,
+      "name": "test-file-3.csv",
+      "download": "1567806329055-test-file-3.csv",
+      "id": 2
+    }
+  ],
   "users": [
     {
       "id": 1,

@@ -23,7 +23,7 @@ server.post('/files', function(req, res, next) {
     }
     req.body.updateAt = time;
     req.body.name = name;
-    req.body.download = `/download/${uName}`;
+    req.body.download = uName;
     next();
   });
 });

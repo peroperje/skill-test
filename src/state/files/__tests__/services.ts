@@ -12,12 +12,12 @@ describe('Files Service', () => {
     });
   });
   it('uploadFile', done => {
-    const file = {} as File;
-    uploadFile({ file: file }).then(res => {
+    const file = new FormData();
+    uploadFile(file).then(res => {
       expect(res).toEqual({
         url,
         method: 'post',
-        data: { file: file },
+        data: file,
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       done();

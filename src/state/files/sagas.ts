@@ -29,7 +29,7 @@ export function* fetch(): SagaIterator {
   }
 }
 export function* upload(
-  action: PayloadAction<TypeConstant, { file: File }>
+  action: PayloadAction<TypeConstant, FormData>
 ): SagaIterator {
   try {
     const { payload } = action;
