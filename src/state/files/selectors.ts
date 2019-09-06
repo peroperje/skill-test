@@ -13,41 +13,51 @@ export const getFiles: Selector<ApplicationState, FileItem[]> = createSelector(
   }
 );
 
-const isFetching: Selector<ApplicationState, boolean> = createSelector(
+export const isFetching: Selector<ApplicationState, boolean> = createSelector(
   getState,
   state => {
     return state.fetching;
   }
 );
 
-const getFetchingErr: Selector<ApplicationState, string> = createSelector(
+export const getFetchingErr: Selector<
+  ApplicationState,
+  string
+> = createSelector(
   getState,
   state => {
     return state.fetchError;
   }
 );
 
-const isDeleting: Selector<ApplicationState, boolean> = createSelector(
+export const isDeleting: Selector<ApplicationState, boolean> = createSelector(
   getState,
   state => {
     return state.deleting;
   }
 );
 
-const getDelletingErr: Selector<ApplicationState, string> = createSelector(
+export const getDelletingErr: Selector<
+  ApplicationState,
+  string
+> = createSelector(
   getState,
   state => {
     return state.deleteError;
   }
 );
 
-const isUploading: Selector<ApplicationState, boolean> = createSelector(
+export const isUploading: Selector<ApplicationState, boolean> = createSelector(
   getState,
   state => {
     return state.uploading;
   }
 );
-const getUpoadingErr: Selector<ApplicationState, string> = createSelector(
+
+export const getUpoadingErr: Selector<
+  ApplicationState,
+  string
+> = createSelector(
   getState,
   state => {
     return state.deleteError;
