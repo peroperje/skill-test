@@ -1,6 +1,19 @@
 import { testSaga } from 'redux-saga-test-plan';
 import watchFile, { fetch, deleteFile, upload } from '../sagas';
-import { FilesActionTypes } from '../types';
+import { FileItem, FilesActionTypes } from '../types';
+import {
+  fetchFiles as fetchService,
+  uploadFile as uploadService,
+  deleteFile as deleService
+} from '../services';
+import {
+  fetchFilesSuccess,
+  fetchFilesFailed,
+  deleteFileSuccess,
+  deleteFileFailed,
+  uploadFileSuccess,
+  uploadFilesFailed
+} from '../actions';
 
 describe('File Sagas', () => {
   it('watchFile', () => {
@@ -13,5 +26,27 @@ describe('File Sagas', () => {
       .takeEvery(FilesActionTypes.DELETE_FILE_REQUEST, deleteFile)
       .next()
       .isDone();
+  });
+  describe('fetch', () => {
+    it('success', () => {
+      const data = [] as FileItem[];
+      testSaga(fetch)
+        .next()
+        .call(fetchService)
+        .next(data)
+        .put(fetchFilesSuccess(data))
+        .next()
+        .isDone();
+    });
+    it('failed', () => {
+      const err = new Error('error message');
+      testSaga(fetch)
+        .next()
+        .call(fetchService)
+        .throw(err)
+        .put(fetchFilesFailed(err.message))
+        .next()
+        .isDone();
+    });
   });
 });
