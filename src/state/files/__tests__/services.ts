@@ -22,4 +22,14 @@ describe('Files Service', () => {
       done();
     });
   });
+
+  it('deleteFile ', done => {
+    const id = 1;
+    deleteFile(id).then(res => {
+      expect(res).toEqual({
+        url: `${url}/${id}`,
+        method: 'delete'
+      });
+    });
+  });
 });
