@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik, FormikProps } from 'formik';
-
+import { ActionsProp } from './types';
 import validationSchema from './validation';
 
 export interface FormValues {
@@ -13,12 +13,12 @@ const initialValues: FormValues = {
   password: ''
 };
 
-const Login: React.FC = (): JSX.Element => {
+const Login: React.FC<ActionsProp> = ({ submit }: ActionsProp): JSX.Element => {
   return (
     <>
       <Formik
         onSubmit={(values: FormValues): void => {
-          console.log(values);
+          submit(values);
         }}
         initialValues={initialValues}
         validationSchema={validationSchema}
