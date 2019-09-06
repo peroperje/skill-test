@@ -7,7 +7,7 @@ import {
 } from '../types';
 import { INIT_STATE } from './initialState';
 
-const normalizeState = (data: FileItem[]): FileStatePropById => {
+export const normalizeState = (data: FileItem[]): FileStatePropById => {
   return data.reduce((acc: FileStatePropById, item: FileItem) => {
     return {
       ...acc,
@@ -34,10 +34,7 @@ const fetch: Reducer<FileState> = (state = INIT_STATE, action) => {
         ...state,
         ...{
           fetching: false,
-          byId: {
-            ...state.byId,
-            ...normalizeState(payload)
-          },
+          byId: normalizeState(payload),
           allId: [...state.allId, ...payload.map((i: FileItem): number => i.id)]
         }
       };
