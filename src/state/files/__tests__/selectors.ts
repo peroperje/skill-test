@@ -1,6 +1,6 @@
 import { OutputSelector } from 'reselect';
 import { INIT_STATE } from '../reducers/initialState';
-import { FileState, FileItem, FileStatePropById } from '../types';
+import { FileState, FileItem } from '../types';
 import {
   getFiles,
   isFetching,
