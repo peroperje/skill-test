@@ -35,6 +35,24 @@
       "name": "test-file-3.csv",
       "download": "1567885746007-test-file-3.csv",
       "id": 12
+    },
+    {
+      "updateAt": 1567887501584,
+      "name": "test-file-3.csv",
+      "download": "1567887501584-test-file-3.csv",
+      "id": 13
+    },
+    {
+      "updateAt": 1567888194653,
+      "name": "file-test-1.xlsx",
+      "download": "1567888194653-file-test-1.xlsx",
+      "id": 14
+    },
+    {
+      "updateAt": 1567888216550,
+      "name": "test-file-3.csv",
+      "download": "1567888216550-test-file-3.csv",
+      "id": 15
     }
   ],
   "users": [
