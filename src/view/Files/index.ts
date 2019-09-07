@@ -1,7 +1,7 @@
 import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
 import { compose } from 'recompose';
 
-import withShouldFetch from '../../HoC/withShouldFetch';
+import withShouldFetch from '../../utils/HoC/withShouldFetch';
 import { fetchFilesRequest } from '../../state/files/actions';
 import { shouldFetch } from '../../state/files/selectors';
 

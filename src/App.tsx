@@ -16,7 +16,7 @@ const App: React.FC = (): JSX.Element => {
       <BrowserRouter>
         <div className="App">
           <header className="App-header">
-            <Navigation />
+            <Route path={ROOT_ROUTE} component={Navigation} />
             <div>
               <Route path={ROOT_ROUTE} exact component={Files} />
               <RouteOnlyNonLogged path={LOGIN_ROUTE} exact component={Login} />

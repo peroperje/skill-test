@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect, MapStateToProps } from 'react-redux';
 
-import { ApplicationState } from '../state/types';
-import { isLogged } from '../state/cUser/selectors';
+import { ApplicationState } from '../../state/types';
+import { isLogged } from '../../state/cUser/selectors';
 
 interface StateProps {
   isLogged: boolean;

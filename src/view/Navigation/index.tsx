@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { LOGIN_ROUTE, ROOT_ROUTE } from '../../utils/route/routesDefinition';
-import ISLogged from '../../HoC/ISLogged';
+import ISLogged from '../../utils/HoC/ISLogged';
 import UserWelcome from './UserWelcome';
 
 const Navigation: React.FC = (): JSX.Element => {

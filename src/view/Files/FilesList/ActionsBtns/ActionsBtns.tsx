@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ISLogged from '../../../../HoC/ISLogged';
+import ISLogged from '../../../../utils/HoC/ISLogged';
 import Delete from './Delete';
 import DownLoad from './DownLoad';
 import { PropsId, PropsDownLoad } from './types';
