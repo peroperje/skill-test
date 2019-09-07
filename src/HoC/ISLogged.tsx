@@ -17,7 +17,7 @@ const mapStateToProps: MapStateToProps<
 });
 
 interface ChildrenProps {
-  children: (x: boolean) => React.ReactNode;
+  children: (x: boolean) => React.ReactNode | boolean;
 }
 
 type ISLoggedProps = StateProps & ChildrenProps;
