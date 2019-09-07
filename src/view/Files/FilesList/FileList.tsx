@@ -16,12 +16,12 @@ const FilesList: React.FC<FileListProps> = ({
             <div>Uploaded on</div>
             <div>Action</div>
           </div>
-          {files.map(({ id, name, updateAt }) => {
+          {files.map(({ id, name, updateAt, download }) => {
             return (
               <div key={id} className="Flex-row">
                 <div>{name}</div>
                 <div>{updateAt}</div>
-                <ActionsBtns id={id} />
+                <ActionsBtns id={id} download={download} />
               </div>
             );
           })}
