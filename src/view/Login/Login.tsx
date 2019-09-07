@@ -5,6 +5,7 @@ import { ActionsProp } from './types';
 import validationSchema from './validation';
 import {
   Container,
+  Typography,
   TextField,
   Button,
   Box,
@@ -66,6 +67,7 @@ const Login: React.FC<ActionsProp> = ({ submit }: ActionsProp): JSX.Element => {
                 width="30%"
                 mt={5}
               >
+                <Typography variant="h5">Login</Typography>
                 <TextField
                   className={classes.textForm}
                   variant="outlined"
