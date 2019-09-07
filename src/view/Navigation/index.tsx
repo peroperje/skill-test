@@ -1,6 +1,5 @@
 import React from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-
+import { makeStyles, createStyles, Theme } from '../../UI';
 import { AppBar, Toolbar, Button } from '../../UI';
 import { LOGIN_ROUTE, ROOT_ROUTE } from '../../utils/route/routesDefinition';
 import ISLogged from '../../utils/HoC/ISLogged';
