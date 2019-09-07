@@ -5,6 +5,36 @@
       "name": "file-test-1.xlsx",
       "download": "1567857123289-file-test-1.xlsx",
       "id": 1
+    },
+    {
+      "updateAt": 1567883409284,
+      "name": "test-file-2.xls",
+      "download": "1567883409284-test-file-2.xls",
+      "id": 2
+    },
+    {
+      "updateAt": 1567885285014,
+      "name": "test-file-3.csv",
+      "download": "1567885285014-test-file-3.csv",
+      "id": 9
+    },
+    {
+      "updateAt": 1567885403099,
+      "name": "file-test-1.xlsx",
+      "download": "1567885403099-file-test-1.xlsx",
+      "id": 10
+    },
+    {
+      "updateAt": 1567885736075,
+      "name": "test-file-2.xls",
+      "download": "1567885736075-test-file-2.xls",
+      "id": 11
+    },
+    {
+      "updateAt": 1567885746007,
+      "name": "test-file-3.csv",
+      "download": "1567885746007-test-file-3.csv",
+      "id": 12
     }
   ],
   "users": [

@@ -9,3 +9,4 @@ export { default as Toolbar } from './Toolbar';
 export { Table, TableBody, TableCell, TableHead, TableRow } from './Table';
 export { TextField } from './Form';
 export { Typography } from './Typography';
+export { CloudUploadIcon } from './Icons';

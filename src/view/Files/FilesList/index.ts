@@ -10,7 +10,7 @@ const mapStateToProps: MapStateToProps<
   {},
   ApplicationState
 > = state => ({
-  files: getFiles(state)
+  files: getFiles(state).reverse()
 });
 
 export default connect(mapStateToProps)(FileList);

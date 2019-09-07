@@ -21,10 +21,6 @@ const mapStateToProps: MapStateToProps<
   {},
   ApplicationState
 > = state => {
-  console.log(
-    'Should fetch',
-    jwt.exists() && !isLogged(state) && !isFetching(state)
-  );
   return {
     shouldFetch: jwt.exists() && !isLogged(state) && !isFetching(state)
   };
