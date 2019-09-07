@@ -1,7 +1,7 @@
 import { connect, MapStateToProps } from 'react-redux';
 
 import { ApplicationState } from '../../../state/types';
-import { getFiles } from '../../../state/files/selectors';
+import { getFiles, isFetching } from '../../../state/files/selectors';
 import { FileListProps } from './types';
 import FileList from './FileList';
 
@@ -10,7 +10,8 @@ const mapStateToProps: MapStateToProps<
   {},
   ApplicationState
 > = state => ({
-  files: getFiles(state).reverse()
+  files: getFiles(state).reverse(),
+  isFetching: isFetching(state)
 });
 
 export default connect(mapStateToProps)(FileList);

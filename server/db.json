@@ -1,5 +1,12 @@
 {
-  "files": [],
+  "files": [
+    {
+      "updateAt": 1567897135218,
+      "name": "test-file-2.xls",
+      "download": "1567897135218-test-file-2.xls",
+      "id": 1
+    }
+  ],
   "users": [
     {
       "id": 1,
