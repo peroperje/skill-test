@@ -1,3 +1,1 @@
-import Toolbar from '@material-ui/core/Toolbar';
-
-export default Toolbar;
+export { default as Toolbar } from '@material-ui/core/Toolbar';
