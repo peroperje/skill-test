@@ -16,7 +16,7 @@
   "users": [
     {
       "id": 1,
-      "fistName": "Petar",
+      "firstName": "Petar",
       "lastName": "Borovcanin",
       "email": "petar@ptt.yu"
     }
