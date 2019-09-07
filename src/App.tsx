@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import state from './state';
 import { ROOT_ROUTE, LOGIN_ROUTE } from './utils/route/routesDefinition';
-import { Container } from './UI';
+import { Container, Box } from './UI';
 import Navigation from './view/Navigation';
 import RouteOnlyNonLogged from './utils/route/RouteOnlyNonLogged';
 import Files from './view/Files';
@@ -19,10 +19,10 @@ const App: React.FC = (): JSX.Element => {
         <RELogin />
         <Container>
           <Route path={ROOT_ROUTE} component={Navigation} />
-          <Container>
+          <Box mt={5}>
             <Route exact path={ROOT_ROUTE} component={Files} />
             <RouteOnlyNonLogged exact path={LOGIN_ROUTE} component={Login} />
-          </Container>
+          </Box>
         </Container>
       </BrowserRouter>
     </Provider>
