@@ -9,17 +9,19 @@ import Navigation from './view/Navigation';
 import RouteOnlyNonLogged from './utils/route/RouteOnlyNonLogged';
 import Files from './view/Files';
 import Login from './view/Login';
+import RELogin from './RELogin';
 
 const App: React.FC = (): JSX.Element => {
   return (
     <Provider store={state}>
       <BrowserRouter>
+        <RELogin />
         <div className="App">
           <header className="App-header">
             <Route path={ROOT_ROUTE} component={Navigation} />
             <div>
-              <Route path={ROOT_ROUTE} exact component={Files} />
-              <RouteOnlyNonLogged path={LOGIN_ROUTE} exact component={Login} />
+              <Route exact path={ROOT_ROUTE} component={Files} />
+              <RouteOnlyNonLogged exact path={LOGIN_ROUTE} component={Login} />
             </div>
           </header>
         </div>
