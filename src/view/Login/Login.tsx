@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, FormikProps } from 'formik';
 
-import { ActionsProp } from './types';
+import { ActionsProp, StateProps } from './types';
 import validationSchema from './validation';
 import {
   Container,
@@ -9,6 +9,7 @@ import {
   TextField,
   Button,
   Box,
+  CircularProgress,
   makeStyles,
   createStyles,
   Theme
@@ -38,7 +39,11 @@ const useStyle = makeStyles((theme: Theme) => {
   });
 });
 
-const Login: React.FC<ActionsProp> = ({ submit }: ActionsProp): JSX.Element => {
+const Login: React.FC<StateProps & ActionsProp> = ({
+  submit,
+  isFetching,
+  error
+}: StateProps & ActionsProp): JSX.Element => {
   const classes = useStyle();
   return (
     <Formik
@@ -68,6 +73,7 @@ const Login: React.FC<ActionsProp> = ({ submit }: ActionsProp): JSX.Element => {
                 mt={5}
               >
                 <Typography variant="h5">Login</Typography>
+                {error && <Typography color="error">{error}</Typography>}
                 <TextField
                   className={classes.textForm}
                   variant="outlined"
@@ -98,9 +104,12 @@ const Login: React.FC<ActionsProp> = ({ submit }: ActionsProp): JSX.Element => {
                   fullWidth
                 />
 
-                <Button fullWidth variant="contained" type="submit">
-                  Login
-                </Button>
+                {!isFetching && (
+                  <Button fullWidth variant="contained" type="submit">
+                    Login
+                  </Button>
+                )}
+                {isFetching && <CircularProgress />}
               </Box>
             </Container>
           </form>
