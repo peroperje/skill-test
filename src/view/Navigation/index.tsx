@@ -1,25 +1,58 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+
+import { AppBar, Toolbar, Button } from '../../UI';
 import { LOGIN_ROUTE, ROOT_ROUTE } from '../../utils/route/routesDefinition';
 import ISLogged from '../../utils/HoC/ISLogged';
+import { Link } from 'react-router-dom';
 import UserWelcome from './UserWelcome';
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1
+    },
+    menuButton: {
+      marginRight: theme.spacing(2)
+    },
+    title: {
+      flexGrow: 1
+    }
+  })
+);
+
 const Navigation: React.FC = (): JSX.Element => {
+  const classes = useStyles();
+
   return (
-    <div className="Flex-row">
-      <Link to={ROOT_ROUTE}>Home</Link>
-      <ISLogged>
-        {(isLogged): React.ReactNode => {
-          return (
-            <>
-              {!isLogged && <Link to={LOGIN_ROUTE}>Sign in</Link>}
-              {isLogged && <UserWelcome />}
-            </>
-          );
-        }}
-      </ISLogged>
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <Button
+            className={classes.title}
+            component={Link}
+            to={ROOT_ROUTE}
+            color="inherit"
+          >
+            Home
+          </Button>
+          <ISLogged>
+            {(isLogged): React.ReactNode => {
+              return (
+                <>
+                  {!isLogged && (
+                    <Button component={Link} to={LOGIN_ROUTE} color="inherit">
+                      Login
+                    </Button>
+                  )}
+                  {isLogged && <UserWelcome />}
+                </>
+              );
+            }}
+          </ISLogged>
+        </Toolbar>
+      </AppBar>
     </div>
   );
 };
-
 export default Navigation;
