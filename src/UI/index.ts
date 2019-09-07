@@ -15,4 +15,4 @@ export {
   CloudDownload,
   Description
 } from './Icons';
-export { CircularProgress } from './Progress';
+export { CircularProgress, LinearProgress } from './Progress';
