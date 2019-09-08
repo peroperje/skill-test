@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Shallow Snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Memo(Connect(ShouldFetch)) />
+    <ForwardRef(WithStyles)>
+      <Route
+        component={[Function]}
+        path="/"
+      />
+      <ForwardRef(StyledComponent)
+        mt={5}
+      >
+        <Route
+          component={
+            Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(ShouldFetch)",
+              "type": [Function],
+            }
+          }
+          exact={true}
+          path="/"
+        />
+        <RouteOnlyNonLogged
+          component={
+            Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(Login)",
+              "type": [Function],
+            }
+          }
+          exact={true}
+          path="/login"
+        />
+      </ForwardRef(StyledComponent)>
+    </ForwardRef(WithStyles)>
+  </BrowserRouter>
+</Provider>
+`;

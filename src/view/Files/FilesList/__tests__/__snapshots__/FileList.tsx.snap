@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileList Shallow Snapshot with Files  1`] = `
+<div
+  className="makeStyles-tableWrapper-1"
+>
+  <ForwardRef(WithStyles)
+    stickyHeader={true}
+  >
+    <ForwardRef(WithStyles)>
+      <ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
+          align="center"
+        >
+          File Name
+        </ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
+          align="center"
+        >
+          Upload On
+        </ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
+          align="center"
+        >
+           
+        </ForwardRef(WithStyles)>
+      </ForwardRef(WithStyles)>
+    </ForwardRef(WithStyles)>
+    <ForwardRef(WithStyles)>
+      <ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
+          align="center"
+        >
+          some name.csv
+        </ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
+          align="center"
+        >
+          45465464
+        </ForwardRef(WithStyles)>
+        <ForwardRef(WithStyles)
+          align="center"
+        >
+          <ActionsBtns
+            download="45645--some-name.csv"
+            id={4}
+          />
+        </ForwardRef(WithStyles)>
+      </ForwardRef(WithStyles)>
+    </ForwardRef(WithStyles)>
+  </ForwardRef(WithStyles)>
+</div>
+`;
+
+exports[`FileList Snapshot empty files 1`] = `
+<div
+  className="makeStyles-tableWrapper-1"
+>
+  <h4
+    className="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+  >
+    There are no files
+  </h4>
+</div>
+`;
