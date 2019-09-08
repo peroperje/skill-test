@@ -3,7 +3,8 @@ import { makeStyles, createStyles, Theme } from '../../UI';
 import { AppBar, Toolbar, Button } from '../../UI';
 import { LOGIN_ROUTE, ROOT_ROUTE } from '../../utils/route/routesDefinition';
 import ISLogged from '../../utils/HoC/ISLogged';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+import Link from '../../utils/route/CollisionLink';
 import UserWelcome from './UserWelcome';
 
 const useStyles = makeStyles((theme: Theme) =>

@@ -6,7 +6,7 @@ import rootReducer from './rootReducer';
 import rootSaga from './rootSaga';
 import { ApplicationState } from './types';
 
-const sagaMiddleware = createSagaMiddleware();
+export const sagaMiddleware = createSagaMiddleware();
 
 const composeEnhancers = composeWithDevTools({
   // options like actionSanitizer, stateSanitizer
