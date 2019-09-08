@@ -1,6 +1,6 @@
-##React Test skill App
+# React Test skill App
 
-### Instalation
+## Instalation
 
 run commands:
 
@@ -8,7 +8,7 @@ run commands:
 
 `$ yarn`
 
-### Scripts
+## Scripts
 
 `yarn start`
 
@@ -27,13 +27,13 @@ it runs only back-end server in watch mode
 It runs eslint
 
 
-### Login
+## Login
 
 `email: petar@ptt.yu | password: whatever`
 
 Use for password any word. There is no server-side validation.
 
-### Add new user  
+## Add new user  
 
 Change file:
 
