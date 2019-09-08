@@ -94,9 +94,7 @@ server.get('/read/:id', function(req, res) {
     }
     data.shift();
     data.shift();
-    res.status(200).jsonp({
-      data: data
-    });
+    res.status(200).jsonp(data);
   });
 
 
