@@ -1,4 +1,4 @@
-# React Test skill App
+# Skill test 
 
 ## Instalation
 
@@ -54,4 +54,6 @@ and add a new object (with the same shape) to users array :
 ...
     
 ```
+##  Directory with files samples for upload:
 
+`skill-test/dev/`
