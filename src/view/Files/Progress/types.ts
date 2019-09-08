@@ -1,3 +1,4 @@
 export interface StateProps {
-  showProgress: boolean;
+  showLineProgress: boolean;
+  showCircularProgress: boolean;
 }

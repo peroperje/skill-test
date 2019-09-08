@@ -16,7 +16,8 @@ const mapStateToProps: MapStateToProps<
   {},
   ApplicationState
 > = state => ({
-  showProgress: isFetching(state) || isUploading(state) || isDeleting(state)
+  showLineProgress: isUploading(state) || isDeleting(state),
+  showCircularProgress: isFetching(state)
 });
 
 export default connect(mapStateToProps)(Progress);

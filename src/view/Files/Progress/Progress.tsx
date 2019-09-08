@@ -1,12 +1,22 @@
 import React from 'react';
 
-import { LinearProgress } from '../../../UI';
+import { LinearProgress, CircularProgress, Box } from '../../../UI';
 import { StateProps } from './types';
 
 const Progress: React.FC<StateProps> = ({
-  showProgress
-}: StateProps): JSX.Element | null => {
-  return showProgress ? <LinearProgress color="secondary" /> : null;
+  showLineProgress,
+  showCircularProgress
+}: StateProps): JSX.Element => {
+  return (
+    <>
+      {showLineProgress && <LinearProgress color="secondary" />}
+      {showCircularProgress && (
+        <Box mt={10} display="flex" justifyContent="center" alignItems="center">
+          <CircularProgress color="primary" />
+        </Box>
+      )}
+    </>
+  );
 };
 
 export default Progress;
