@@ -1,12 +1,5 @@
 {
-  "files": [
-    {
-      "updateAt": 1567948076408,
-      "name": "test-file-3.csv",
-      "download": "1567948076408-test-file-3.csv",
-      "id": 2
-    }
-  ],
+  "files": [],
   "users": [
     {
       "id": 1,
