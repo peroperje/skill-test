@@ -1,5 +1,24 @@
 {
-  "files": [],
+  "files": [
+    {
+      "updateAt": 1567977667477,
+      "name": "CSV-Sample.csv",
+      "download": "1567977667477-CSV-Sample.csv",
+      "id": 1
+    },
+    {
+      "updateAt": 1567977675417,
+      "name": "XLS-Sample.xls",
+      "download": "1567977675417-XLS-Sample.xls",
+      "id": 2
+    },
+    {
+      "updateAt": 1567977688834,
+      "name": "XLSX-Sample.xlsx",
+      "download": "1567977688834-XLSX-Sample.xlsx",
+      "id": 3
+    }
+  ],
   "users": [
     {
       "id": 1,

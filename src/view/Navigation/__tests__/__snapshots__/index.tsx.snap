@@ -8,11 +8,11 @@ exports[`Navigation Snapshot when user logged 1`] = `
     className="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary"
   >
     <div
-      className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+      className="MuiToolbar-root MuiToolbar-regular makeStyles-toolBar-3 MuiToolbar-gutters"
     >
       <a
         aria-disabled={false}
-        className="MuiButtonBase-root MuiButton-root makeStyles-title-3 MuiButton-text MuiButton-colorInherit"
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit"
         href="/"
         onBlur={[Function]}
         onClick={[Function]}

@@ -15,8 +15,9 @@ const useStyles = makeStyles((theme: Theme) =>
     menuButton: {
       marginRight: theme.spacing(2)
     },
-    title: {
-      flexGrow: 1
+    toolBar: {
+      display: 'flex',
+      justifyContent: 'space-between'
     }
   })
 );
@@ -27,13 +28,8 @@ const Navigation: React.FC = (): JSX.Element => {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
-          <Button
-            className={classes.title}
-            component={Link}
-            to={ROOT_ROUTE}
-            color="inherit"
-          >
+        <Toolbar className={classes.toolBar}>
+          <Button component={Link} to={ROOT_ROUTE} color="inherit">
             Home
           </Button>
           <ISLogged>
