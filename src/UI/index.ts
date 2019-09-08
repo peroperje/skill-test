@@ -9,10 +9,11 @@ export { Toolbar } from './Toolbar';
 export { Table, TableBody, TableCell, TableHead, TableRow } from './Table';
 export { TextField } from './Form';
 export { Typography } from './Typography';
+export { CircularProgress, LinearProgress } from './Progress';
 export {
   CloudUploadIcon,
   DeleteIcon,
   CloudDownload,
-  Description
+  Description,
+  PowerSettingsIcon
 } from './Icons';
-export { CircularProgress, LinearProgress } from './Progress';
