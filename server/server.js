@@ -1,3 +1,4 @@
+const XLSX = require('xlsx');
 const path = require('path');
 const bodyParser = require('body-parser');
 const jsonServer = require('json-server');
@@ -12,10 +13,9 @@ server.use(fileUpload());
 server.use(bodyParser.json()); // support json encoded bodies
 server.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-
-server.use(function(req, res, next){
+/*server.use(function(req, res, next){
   setTimeout(next,2500);
-});
+});*/
 
 server.post('/files', function(req, res, next) {
   let time = new Date().getTime();
@@ -54,6 +54,52 @@ server.post('/login', function(req, res) {
   } else {
     res.status(401).jsonp('User not found');
   }
+});
+
+server.get('/read/:id', function(req, res) {
+  const db = router.db;
+  const { id } = req.params;
+
+  const file = db
+    .get('files')
+    .find({ id: parseInt(id, 10) })
+    .value();
+
+  if (!file) {
+    res.status(401).jsonp('File not found');
+  }
+
+  const workbook = XLSX.readFile(path.join(__dirname, 'files', file.download));
+  const sheet_name_list = workbook.SheetNames;
+  sheet_name_list.forEach(function(y) {
+    const worksheet = workbook.Sheets[y];
+    let headers = {};
+    let data = [];
+    for (z in worksheet) {
+      if (z[0] === '!') continue;
+      //parse out the column, row, and value
+      let col = z.substring(0, 1);
+      let row = parseInt(z.substring(1));
+      let value = worksheet[z].v;
+
+      //store header names
+      if (row == 1) {
+        headers[col] = value;
+        continue;
+      }
+
+      if (!data[row]) data[row] = {};
+      data[row][headers[col]] = value;
+
+    }
+    data.shift();
+    data.shift();
+    res.status(200).jsonp({
+      data: data
+    });
+  });
+
+
 });
 
 server.use(router);
