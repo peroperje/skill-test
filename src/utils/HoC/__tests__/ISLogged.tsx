@@ -19,7 +19,7 @@ describe('ISLogged', () => {
     create(
       <MockedProvider state={state}>
         <ISLogged>
-          {isLogged => {
+          {(isLogged): JSX.Element => {
             logged = isLogged;
             return <></>;
           }}
@@ -46,7 +46,7 @@ describe('ISLogged', () => {
     create(
       <MockedProvider state={state}>
         <ISLogged>
-          {isLogged => {
+          {(isLogged): JSX.Element => {
             logged = isLogged;
             return <></>;
           }}

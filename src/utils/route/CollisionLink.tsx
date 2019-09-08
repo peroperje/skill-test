@@ -8,8 +8,7 @@ const CollisionLink = React.forwardRef<
   HTMLAnchorElement,
   Omit<RouterLinkProps, 'innerRef'>
 >((props, ref) => {
-  const { to } = props;
-  return <RouterLink innerRef={ref} to={to} {...props} />;
+  return <RouterLink innerRef={ref} {...props} />;
 });
 
 CollisionLink.displayName = 'CollisionLink';
