@@ -13,9 +13,9 @@ server.use(fileUpload());
 server.use(bodyParser.json()); // support json encoded bodies
 server.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-/*server.use(function(req, res, next){
+server.use(function(req, res, next){
   setTimeout(next,2500);
-});*/
+});
 
 server.post('/files', function(req, res, next) {
   let time = new Date().getTime();

@@ -10,7 +10,7 @@ type Props = PropsId & PropsDownLoad;
 
 const ActionsBtns: React.FC<Props> = ({ id, download }: Props) => (
   <div>
-    <View />
+    <View id={id} />
     <DownLoad download={download} />
     <ISLogged>
       {(isLogged): React.ReactNode | boolean => {

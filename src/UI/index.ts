@@ -10,6 +10,7 @@ export { Table, TableBody, TableCell, TableHead, TableRow } from './Table';
 export { TextField } from './Form';
 export { Typography } from './Typography';
 export { CircularProgress, LinearProgress } from './Progress';
+export { Modal } from './Modal';
 export {
   CloudUploadIcon,
   DeleteIcon,
