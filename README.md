@@ -1,5 +1,6 @@
+##React Test skill App
 
-#### Instalation
+### Instalation
 
 run commands:
 
@@ -7,7 +8,7 @@ run commands:
 
 `$ yarn`
 
-#### Scripts
+### Scripts
 
 `yarn start`
 
@@ -24,3 +25,33 @@ it runs only back-end server in watch mode
 `yarn lint`
 
 It runs eslint
+
+
+### Login
+
+`email: petar@ptt.yu | password: whatever`
+
+Use for password any word. There is no server-side validation.
+
+### Add new user  
+
+Change file:
+
+`/skill-test/server/db.json`
+
+and add a new object (with the same shape) to users array :
+
+```
+...
+
+ "users": [
+    {
+      "id": 1,
+      "firstName": "Petar",
+      "lastName": "Borovcanin",
+      "email": "petar@ptt.yu"
+    }
+...
+    
+```
+
