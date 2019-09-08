@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography Snapshot 1`] = `
+<p
+  className="MuiTypography-root MuiTypography-body1"
+>
+  Some text
+</p>
+`;
+
+exports[`Typography Snapshot variant 1`] = `
+<h3
+  className="MuiTypography-root MuiTypography-h3"
+>
+  Some text
+</h3>
+`;

@@ -1,4 +1,0 @@
-```
-<Button>Click me</Button>
-
-```

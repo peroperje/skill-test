@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icons CloudDownload Snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  className="MuiSvgIcon-root"
+  focusable="false"
+  role="presentation"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"
+  />
+</svg>
+`;
+
+exports[`Icons CloudUploadIcon Snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  className="MuiSvgIcon-root"
+  focusable="false"
+  role="presentation"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+  />
+</svg>
+`;
+
+exports[`Icons DeleteIcon Snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  className="MuiSvgIcon-root"
+  focusable="false"
+  role="presentation"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+  />
+</svg>
+`;
+
+exports[`Icons Description Snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  className="MuiSvgIcon-root"
+  focusable="false"
+  role="presentation"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+  />
+</svg>
+`;
+
+exports[`Icons PowerSettingsIcon Snapshot 1`] = `
+<svg
+  aria-hidden="true"
+  className="MuiSvgIcon-root"
+  focusable="false"
+  role="presentation"
+  viewBox="0 0 24 24"
+>
+  <path
+    d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"
+  />
+</svg>
+`;
